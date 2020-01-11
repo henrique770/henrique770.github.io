@@ -2,7 +2,7 @@
 
 Check out the course repository at:
 
-https://github.com/learngatsby/build-personal-website
+https://henrique770.github.io/
 
 Get started by running:
 

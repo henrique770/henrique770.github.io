@@ -71,21 +71,21 @@ const Projects = ({ data }) => (
             title="GoBarber"
             subtitle="Barber website build in GoStack Bootcamp rocketseat"
             link="https://github.com/henrique770/GoBarber"
-            tags={['React', 'NodeJs', 'Postgres', 'Sequelize', 'MongoDB']}
+            tags={['React', 'Node', 'Postgres', 'Sequelize', 'MongoDB']}
             image={<Img fixed={data.propject1.childImageSharp.fixed} alt="GoBarber" />}
           />
           <Card
             title="QuickCard"
             subtitle="Plataform to study, using methods like flashcards, notes, pomodoro"
             link="https://github.com/henrique770/QuickCard-Project"
-            tags={['React', 'React Native', 'MongoDB', 'Express']}
+            tags={['React', 'React Native', 'MongoDB', 'Node', 'Express']}
             image={<Img fixed={data.project2.childImageSharp.fixed} alt="QuickCard" />}
           />
           <Card
             title="Rocketshoes"
             subtitle="Shopping cart made with flux architecture"
             link="https://github.com/henrique770/Rocketshoes"
-            tags={['React', 'Redux', 'React hooks', 'Json-server']}
+            tags={['React', 'React hooks', 'Redux', 'Json-server']}
             image={<Img fixed={data.project3.childImageSharp.fixed} alt="Rocketshoes" />}
           />
           <Card
@@ -99,7 +99,7 @@ const Projects = ({ data }) => (
             title="Twitter page"
             subtitle="Clone page twitter using Flexbox css"
             link="https://github.com/henrique770/Clone-page-Twitter"
-            tags={['React', 'React hooks']}
+            tags={['Html', 'Css']}
             image={<Img fixed={data.project5.childImageSharp.fixed} alt="Clone page twitter" />}
           />
         </div>

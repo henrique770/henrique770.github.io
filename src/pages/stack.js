@@ -12,9 +12,7 @@ const Stack = () => (
       description="Front-end developer, developing apps and web pages"
       keywords="React, Node, React Native, Front-end, developer, Html, Css"
     />
-    <Helmet>
-      <script async src="https://cdn1.stackshare.io/javascripts/client-code.js" charset="utf-8" />
-    </Helmet>
+    <Helmet />
     <section className="section is-size-4-desktop is-size-5-touch">
       <Title>Stack</Title>
       <div className="has-text-centered">
@@ -25,10 +23,9 @@ const Stack = () => (
         <p className="content">Here is my stack on StackShare:</p>
         <div className="columns is-centered">
           <div className="column is-half">
-            <a frameBorder="0" data-theme="dark" data-layers="1,2,3,4" data-stack-embed="true" href="https://embed.stackshare.io/stacks/embed/dbfdffb7dc9f0b6137d76bebbb579e">
-          Stackshare
-            </a>
+            <a href="https://stackshare.io/henrique770/my-stack">StackShare</a>
           </div>
+
         </div>
       </div>
     </section>

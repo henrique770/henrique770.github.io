@@ -3,7 +3,7 @@ import PropType from 'prop-types';
 
 const Title = ({ children }) => (
   <>
-    <h1 className="title has-text-centered has-text-light">{children}</h1>
+    <h1 className="title has-text-centered has-text-light ">{children}</h1>
     <hr />
   </>
 );

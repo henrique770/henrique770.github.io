@@ -62,14 +62,14 @@ const Home = () => (
           <FontAwesomeIcon icon={faLinkedin} />
         </span>
       </a>
-      <a href="https://codepen.io/yagame" aria-label="codepend">
+      <a href="https://codepen.io/yagame/pens/public" aria-label="codepend">
         <span className="icon is-large fa-2x">
           <FontAwesomeIcon icon={faCodepen} />
         </span>
       </a>
     </div>
     <section className="section content is-size-4-desktop is-size-5-touch">
-      <h4 className="title has-text-light">
+      <h4 className="title has-text-light typing-animation">
         Hello, I am Henrique Araújo!
         {' '}
         {/* <span role="img" aria-label="wave">

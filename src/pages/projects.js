@@ -45,6 +45,13 @@ export const queryImage = graphql`
         }
       }
     }
+    project6: file(relativePath: { eq: "devradar.png" }) {
+      childImageSharp {
+        fixed(width: 96, height: 96) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
   }
 `;
 
@@ -87,6 +94,13 @@ const Projects = ({ data }) => (
             link="https://github.com/henrique770/Rocketshoes"
             tags={['React', 'React hooks', 'Redux', 'Json-server']}
             image={<Img fixed={data.project3.childImageSharp.fixed} alt="Rocketshoes" />}
+          />
+          <Card
+            title="DevRadar"
+            subtitle="App to show nearest developers based on geolocation"
+            link="https://github.com/henrique770/DevRadar"
+            tags={['React', 'React Native', 'Node', 'MongoDb']}
+            image={<Img fixed={data.project6.childImageSharp.fixed} alt="DevRadar" />}
           />
           <Card
             title="React hooks project example"

@@ -1,7 +1,5 @@
 # My website
 
-Check out the course repository at:
-
 https://henrique770.github.io/
 
 Get started by running:

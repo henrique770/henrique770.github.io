@@ -77,7 +77,7 @@ const Home = () => (
         </span> */}
       </h4>
       <p>
-        {'I\'m a Front End Developer, I currently study Information Systems and am almost completing my course. I like to improve every day, I participate in events and development communities, it helps me in how I should act with the job market.'}
+        {'I\'m a Front End Developer, currently study Information Systems and am almost completing my course. I like to improve every day, participate in events and development communities, it helps me in how I should act with the job market.'}
         <br />
         my email:
 

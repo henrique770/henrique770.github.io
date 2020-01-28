@@ -39,7 +39,7 @@ const Home = () => (
         )}
       />
     </figure>
-    <h1 className="title has-text-centered has-text-light">Henrique Araújo</h1>
+    <h1 className="title has-text-centered ">Henrique Araújo</h1>
     <h2 className="subtitle has-text-centered has-text-warning">Front-end developer</h2>
     <div className="has-text-centered icon_format">
       <a href="https://github.com/henrique770" aria-label="github">
@@ -69,7 +69,7 @@ const Home = () => (
       </a>
     </div>
     <section className="section content is-size-4-desktop is-size-5-touch">
-      <h4 className="title has-text-light typing-animation">
+      <h4 className="title  typing-animation">
         Hello, I am Henrique Araújo!
         {' '}
         {/* <span role="img" aria-label="wave">

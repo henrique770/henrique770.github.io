@@ -1,0 +1,84 @@
+/* global.css */
+
+body {
+  -webkit-font-smoothing: antialiased;
+  --bg: #fff;
+  --bg2: #f8f8f8;
+  --bg2hover: #f0eeee;
+  --bgtop: #fff;
+  --textNormal: #656565;
+  --hoverColor: #fff;
+
+  background-color: var(--bg);
+  color: var(--textNormal) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: var(--textNormal) !important;
+}
+
+body.light {
+  -webkit-font-smoothing: antialiased;
+  --bg2: #292929;
+  --bg2hover: #333;
+  --bg: #181818;
+  --bgtop: #202021;
+  --textNormal: rgba(255, 255, 255, 0.88);
+}
+
+.navbar-item,
+.navbar-link {
+  color: var(--textNormal) !important;
+  display: block;
+  line-height: 1.5;
+  padding: 0.5rem 0.75rem;
+  position: relative;
+}
+
+.navbar-item,
+.navbar-link a:hover {
+  background: transparent !important;
+}
+
+.navbar {
+  background: var(--bgtop) !important;
+}
+
+.card {
+  border-radius: 5px;
+}
+.card {
+  background-color: var(--bg2) !important;
+}
+.card:hover {
+  transition: 0.7s;
+  background-color: var(--bg2hover) !important;
+}
+
+.tag {
+  border-radius: 5px !important;
+  background-color: var(--bg) !important;
+  color: var(--textNormal) !important;
+}
+
+.toggleIcon {
+  position: fixed;
+  right: 55px;
+  bottom: 55px;
+  z-index: 999;
+  font-size: 20px;
+}
+
+@media (max-width: 600px) {
+  .toggleIcon {
+    right: 30px;
+    bottom: 20px;
+    position: absolute !important;
+  }
+}

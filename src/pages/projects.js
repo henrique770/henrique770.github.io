@@ -76,7 +76,7 @@ const Projects = ({ data }) => (
         <div className="column is-half">
           <Card
             title="GoBarber"
-            subtitle="Barber website build in GoStack Bootcamp rocketseat"
+            subtitle="Barber website made in GoStack Bootcamp rocketseat"
             link="https://github.com/henrique770/GoBarber"
             tags={['React', 'Node', 'Postgres', 'Sequelize', 'MongoDB']}
             image={<Img fixed={data.propject1.childImageSharp.fixed} alt="GoBarber" />}

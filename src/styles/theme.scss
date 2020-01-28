@@ -1,6 +1,16 @@
-$family-primary: "Droid Sans Mono for Powerline";
+@import '../styles/global.css';
 
-$editor-background: #181818;
+// font
+@font-face {
+  font-family: 'Droid Sans Mono for Powerline';
+  font-display: swap;
+  src: url('../assets/fonts/DroidSansMonoPowerline.otf') format('opentype');
+}
+
+//colors
+$family-primary: 'Droid Sans Mono for Powerline';
+
+$editor-background: var(--bg);
 $editor-foreground: #d4d4d4;
 $editor-activity-bar-badge: #ee324b;
 $editor-menu-background: #202021;
@@ -23,15 +33,64 @@ $link: $editor-activity-bar-badge;
 $link-hover: $editor-constant;
 $white-ter: $text;
 $yellow: $editor-property;
-
-$navbar-background-color: $editor-menu-background;
+$navbar-background-color: var(--bg);
 $navbar-item-color: $editor-foreground;
 $navbar-item-hover-color: $editor-foreground;
 $navbar-item-hover-background-color: $editor-unselected-tab;
 $navbar-burger-color: $navbar-item-color;
-
 $card-background-color: $editor-unselected-tab;
 $card-hover-color: rgba($editor-foreground, 0.15);
 $tag-color: $editor-foreground;
 $tag-background-color: $editor-menu-background;
 $tag-radius: 0;
+
+// home style
+
+.photo {
+  margin: 48px auto 24px;
+}
+
+@media (min-width: 600px) {
+  .typing-animation {
+    animation: type 3s steps(28);
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid var(--textNormal);
+    width: 29ch;
+  }
+
+  @keyframes type {
+    0% {
+      width: 0ch;
+    }
+
+    100% {
+      width: 28ch;
+    }
+  }
+}
+
+//card
+
+.card {
+  margin: 16px 0;
+  box-shadow: none !important;
+  border: none;
+}
+
+img {
+  border-radius: 5px;
+}
+
+//header
+
+.navbar-burger {
+  border: 0;
+  background-color: transparent;
+}
+
+//title
+.hrstyle {
+  width: 60px;
+  margin: 32px auto;
+}

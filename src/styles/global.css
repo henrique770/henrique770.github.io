@@ -58,7 +58,6 @@ body.light {
 }
 .card:hover {
   transition: 0.7s;
-  background-color: var(--bg2hover) !important;
 }
 
 .tag {
@@ -75,10 +74,56 @@ body.light {
   font-size: 20px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 728px) {
   .toggleIcon {
     right: 30px;
     bottom: 20px;
     position: absolute !important;
   }
+  .media-content {
+    overflow-x: auto !important;
+    max-height: 200px !important;
+  }
+}
+
+@media (min-width: 729px) {
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #636269;
+    border: 0px none #ffffff;
+    border-radius: 50px;
+  }
+}
+
+.card-content {
+  transition: all 0.5s cubic-bezier(0.25, 0.39, 0.39, 2.01);
+}
+
+.card-content:hover {
+  transition: all 0.5s cubic-bezier(0.25, 0.39, 0.39, 2.01);
+  transform: scale(1.05);
+}
+
+.icon svg {
+  transition: all 0.5s cubic-bezier(0.25, 0.39, 0.39, 2.01);
+}
+
+.icon svg:hover {
+  transition: all 0.5s cubic-bezier(0.25, 0.39, 0.39, 2.01);
+  transform: scale(1.2);
+}
+
+.toggleIcon svg {
+  font-size: 1.5rem;
+  color: var(--textNormal);
+  transition: all 0.5s cubic-bezier(0.25, 0.39, 0.39, 2.01);
+}
+
+.toggleIcon svg:hover {
+  transition: all 0.5s cubic-bezier(0.25, 0.39, 0.39, 2.01);
+  transform: scale(1.2);
 }

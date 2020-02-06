@@ -10,7 +10,7 @@ import Title from 'components/Title';
 
 export const queryImage = graphql`
   query {
-    propject1: file(relativePath: { eq: "gobarber.png" }) {
+    project1: file(relativePath: { eq: "gobarber.png" }) {
       childImageSharp {
         fixed(width: 96, height: 96) {
           ...GatsbyImageSharpFixed
@@ -52,6 +52,13 @@ export const queryImage = graphql`
         }
       }
     }
+    project7: file(relativePath: { eq: "ugrowth.png" }) {
+      childImageSharp {
+        fixed(width: 96, height: 96) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
   }
 `;
 
@@ -79,7 +86,14 @@ const Projects = ({ data }) => (
             subtitle="Barber website made in GoStack Bootcamp rocketseat"
             link="https://github.com/henrique770/GoBarber"
             tags={['React', 'Node', 'Postgres', 'Sequelize', 'MongoDB']}
-            image={<Img fixed={data.propject1.childImageSharp.fixed} alt="GoBarber" />}
+            image={<Img fixed={data.project1.childImageSharp.fixed} alt="GoBarber" />}
+          />
+          <Card
+            title="Ugrowth"
+            subtitle="Consulting platform, translation of the system previously created in Angular for reactJS initially with the development of the administrator panel"
+            link="https://ugrowth-dev.netlify.com/"
+            tags={['React', 'Styled components']}
+            image={<Img fixed={data.project7.childImageSharp.fixed} alt="Ugrowth" />}
           />
           <Card
             title="QuickCard"

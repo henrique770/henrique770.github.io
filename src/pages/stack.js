@@ -17,15 +17,14 @@ const Stack = () => (
       <Title>Stack</Title>
       <div className="has-text-centered">
         <p className="content">
-          I have experience with many tools,
-          I select them for my projects depending on the usage.
+          I have experience with many tools, I select them for my projects
+          depending on the usage.
         </p>
         <p className="content">Here is my stack on StackShare:</p>
         <div className="columns is-centered">
           <div className="column is-half">
             <a href="https://stackshare.io/henrique770/my-stack">StackShare</a>
           </div>
-
         </div>
       </div>
     </section>

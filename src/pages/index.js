@@ -3,7 +3,10 @@ import { Link, StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faGithub, faTwitter, faLinkedin, faCodepen,
+  faGithub,
+  faTwitter,
+  faLinkedin,
+  faCodepen,
 } from '@fortawesome/free-brands-svg-icons';
 import { faFilePdf } from '@fortawesome/free-regular-svg-icons';
 
@@ -30,7 +33,7 @@ const Home = () => (
             }
           }
         `}
-        render={data => (
+        render={(data) => (
           <Img
             fixed={data.file.childImageSharp.fixed}
             imgStyle={{ borderRadius: '100%' }}
@@ -40,7 +43,9 @@ const Home = () => (
       />
     </figure>
     <h1 className="title has-text-centered ">Henrique Araújo</h1>
-    <h2 className="subtitle has-text-centered has-text-warning">Front-end developer</h2>
+    <h2 className="subtitle has-text-centered has-text-warning">
+      Front-end developer
+    </h2>
     <div className="has-text-centered icon_format">
       <a href="https://github.com/henrique770" aria-label="github">
         <span className="icon is-large fa-2x">
@@ -52,7 +57,10 @@ const Home = () => (
           <FontAwesomeIcon icon={faTwitter} />
         </span>
       </a>
-      <a href={Curriculo} aria-label="email">
+      <a
+        href="https://www.canva.com/design/DAD0v7N8m8k/sZD6peFamNlcs3D1krvv7g/view?utm_content=DAD0v7N8m8k&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton"
+        aria-label="email"
+      >
         <span className="icon is-large fa-2x">
           <FontAwesomeIcon icon={faFilePdf} />
         </span>
@@ -70,27 +78,23 @@ const Home = () => (
     </div>
     <section className="section content is-size-4-desktop is-size-5-touch">
       <h4 className="title  typing-animation">
-        Hello, I am Henrique Araújo!
-        {' '}
+        Hello, I'm Henrique Araújo!{' '}
         {/* <span role="img" aria-label="wave">
           👋
         </span> */}
       </h4>
       <p>
-        {'I\'m a Front End Developer, currently study Information Systems and am almost completing my course. I like to improve every day, participate in events and development communities, it helps me in how I should act with the job market.'}
+        {
+          "I'm graduated in Information Systems. I like to learn new patterns, improve every day, participate in events of technology and development communities, it helps me in how I should act with the job market."
+        }
         <br />
         my email:
-
         <a href="mailto:henrique.1360@gmail.com"> henrique.1360@gmail.com</a>
       </p>
+      <p>Currently i working with web development.</p>
+      <p>Main stack: React.</p>
       <p>
-        I develop projects using React, React Native and Node.
-      </p>
-      <p>
-        Check out my
-        {' '}
-        <Link to="/projects">projects</Link>
-        .
+        Check out my <Link to="/projects">projects</Link>.
       </p>
     </section>
   </Layout>

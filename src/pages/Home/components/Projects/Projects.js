@@ -20,18 +20,22 @@ const Projects = () => {
         </U.Title>
 
         <S.CardWrapper>
-          {projects.map(({ image, name, tags, description }, index) => (
+          {projects.map(({ image, name, tags, description, link }, index) => (
             <S.Card key={index}>
-              <S.Image src={image} alt={name} />
+              <a href={link} aria-label={name}>
+                <S.Image src={image} alt={name} />
+              </a>
               <S.CardContent>
                 <Space size={12}>
-                  <U.Title size={24} weight={500} noMargin gradient>
-                    {name}
-                  </U.Title>
+                  <a href={link} aria-label={name}>
+                    <U.Title size={24} weight={500} noMargin gradient>
+                      {name}
+                    </U.Title>
+                  </a>
                   <Space row size={8} wrap='wrap'>
                     {tags.map(tag => (
                       <S.Tag>
-                        <U.Text noMargin size={12} spacing='0.2px'>
+                        <U.Text noMargin size={12} spacing='0.2px' height={1}>
                           {tag}
                         </U.Text>
                       </S.Tag>

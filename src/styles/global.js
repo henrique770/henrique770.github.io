@@ -14,7 +14,11 @@ const globalStyles = css`
     font-size: 62.5%;
     min-height: 100%;
     font: 16px 'Roboto', sans-serif;
-    line-height: 1.1;
+    line-height: 1.4;
+  }
+
+  a {
+    text-decoration: none;
   }
 
   ::-webkit-scrollbar {

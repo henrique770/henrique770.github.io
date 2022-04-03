@@ -17,7 +17,8 @@ const baseTextStyles = ({
   color,
   weight,
   noMargin,
-  spacing
+  spacing,
+  height
 }) => css`
   label: text;
 
@@ -29,6 +30,7 @@ const baseTextStyles = ({
   margin-bottom: ${!noMargin && theme.size[16]};
 
   letter-spacing: ${spacing && spacing};
+  line-height: ${height && height};
 `
 
 const gradientTextStyles = ({ theme, gradient }) =>

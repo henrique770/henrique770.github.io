@@ -30,7 +30,7 @@ const Sidebar = () => {
           </S.ProfileImage>
         </S.ImageWrapper>
 
-        <Space size={8} align='center'>
+        <Space size={0} align='center'>
           <U.Title size={isMobile ? 32 : 40} weight={600} noMargin>
             Henrique Araújo
           </U.Title>
@@ -42,11 +42,21 @@ const Sidebar = () => {
 
         <S.IconsWrapper>
           <Space row size={16}>
-            <AiOutlineGithub size={35} fill='url(#g31)' />
-            <AiOutlineTwitter size={37} fill='url(#g31)' />
-
-            <AiFillLinkedin size={35} fill='url(#g31)' />
-            <AiOutlineCodepen size={35} fill='url(#g31)' />
+            <a href='https://github.com/henrique770' aria-label='github'>
+              <AiOutlineGithub size={35} fill='url(#g31)' />
+            </a>
+            <a
+              href='https://www.linkedin.com/in/henrique47/'
+              aria-label='linkedin'
+            >
+              <AiFillLinkedin size={35} fill='url(#g31)' />
+            </a>
+            <a
+              href='https://codepen.io/yagame/pens/public'
+              aria-label='codepend'
+            >
+              <AiOutlineCodepen size={35} fill='url(#g31)' />
+            </a>
           </Space>
         </S.IconsWrapper>
 

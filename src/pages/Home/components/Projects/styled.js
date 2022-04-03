@@ -30,7 +30,7 @@ const imageStyles = ({ theme }) => css`
 const cardContentStyles = ({ theme }) => css`
   label: card__content;
 
-  padding: ${theme.size[16]} ${theme.size[24]} ${theme.size[40]};
+  padding: ${theme.size[4]} ${theme.size[24]} ${theme.size[40]};
 `
 
 const cardWrapperStyles = ({ theme }) => css`

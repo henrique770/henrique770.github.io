@@ -4,7 +4,6 @@ import profile from '~/assets/profile.jpg'
 
 import {
   AiOutlineGithub,
-  AiOutlineTwitter,
   AiFillLinkedin,
   AiOutlineCodepen
 } from 'react-icons/ai'

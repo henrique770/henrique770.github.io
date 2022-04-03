@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
       <U.Container>
         <S.Header>
           <Link to='/'>
-            <img src={logo} alt='logo-image' />
+            <img src={logo} alt='logo' />
           </Link>
         </S.Header>
         {children}

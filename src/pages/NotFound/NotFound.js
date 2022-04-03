@@ -1,4 +1,4 @@
-import { Layout, Space } from '~/components'
+import { Layout } from '~/components'
 
 import * as S from './styled'
 import * as U from '~/styles/utils'

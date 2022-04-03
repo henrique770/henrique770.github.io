@@ -33,12 +33,24 @@ const Projects = () => {
               whileTap={{ scale: 1 }}
               variants={item}
             >
-              <a href={link} aria-label={name} target='_blank'>
+              <a
+                href={link}
+                aria-label={name}
+                target='_blank'
+                without
+                rel='noreferrer'
+              >
                 <S.Image src={image} alt={name} />
               </a>
               <S.CardContent>
                 <Space size={12}>
-                  <a href={link} aria-label={name} target='_blank'>
+                  <a
+                    href={link}
+                    aria-label={name}
+                    target='_blank'
+                    without
+                    rel='noreferrer'
+                  >
                     <U.Title size={24} weight={500} noMargin gradient>
                       {name}
                     </U.Title>

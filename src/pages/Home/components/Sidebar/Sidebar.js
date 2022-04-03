@@ -5,7 +5,6 @@ import profile from '~/assets/profile.jpg'
 import {
   AiOutlineGithub,
   AiOutlineTwitter,
-  AiFillFilePdf,
   AiFillLinkedin,
   AiOutlineCodepen
 } from 'react-icons/ai'
@@ -36,23 +35,18 @@ const Sidebar = () => {
             Henrique Araújo
           </U.Title>
 
-          <U.Text
-            size={isMobile ? 16 : 24}
-            weight={400}
-            color='primary'
-            noMargin
-          >
+          <U.Text size={isMobile ? 16 : 24} weight={400} noMargin gradient>
             Front-end developer
           </U.Text>
         </Space>
 
         <S.IconsWrapper>
           <Space row size={16}>
-            <AiOutlineGithub size={35} />
-            <AiOutlineTwitter size={37} />
-            <AiFillFilePdf size={33} />
-            <AiFillLinkedin size={35} />
-            <AiOutlineCodepen size={35} />
+            <AiOutlineGithub size={35} fill='url(#g31)' />
+            <AiOutlineTwitter size={37} fill='url(#g31)' />
+
+            <AiFillLinkedin size={35} fill='url(#g31)' />
+            <AiOutlineCodepen size={35} fill='url(#g31)' />
           </Space>
         </S.IconsWrapper>
 
@@ -60,11 +54,22 @@ const Sidebar = () => {
           <U.Text size={16} color='white' noMargin>
             Contact |
           </U.Text>
-          <U.Text size={16} color='primary' noMargin>
+          <U.Text size={16} noMargin color='primary' gradient weight={600}>
             henrique.1360@gmail.com
           </U.Text>
         </Space>
       </Space>
+      <svg style={{ position: 'absolute' }}>
+        <linearGradient
+          id='g31'
+          gradientUnits='userSpaceOnUse'
+          y1='100%'
+          x2='400%'
+        >
+          <stop stop-color='#ef0f2c' offset='0' />
+          <stop stop-color='#ff3939' offset='0.7' />
+        </linearGradient>
+      </svg>
     </S.Container>
   )
 }

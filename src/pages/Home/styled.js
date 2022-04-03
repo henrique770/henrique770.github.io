@@ -4,7 +4,7 @@ import { css } from '@emotion/react'
 const containerStyles = ({ theme }) => css`
   label: home-container;
 
-  margin-top: 200px;
+  margin-top: 150px;
 
   @media (max-width: ${theme.breaks.xl}) {
     margin-top: 56px;

@@ -1,11 +1,13 @@
 const theme = {
   colors: {
-    background: '#181818',
+    background: '#111',
     primary: '#EE324B',
     secondary: '#f7586d',
     white: '#ffffff',
     gray: '#888888',
-    darkGray: '#333333'
+    gray1: '#181818',
+    gray2: '#292929',
+    gradient: 'linear-gradient(90deg, #ef0f2c 0%, #ee324b 50%, #ff3939 100%)'
   },
 
   size: {

@@ -12,7 +12,7 @@ const containerStyles = ({ theme }) => css`
 const cardStyles = ({ theme }) => css`
   label: card;
 
-  background-color: ${theme.colors.darkGray};
+  background-color: ${theme.colors.gray1};
   border-radius: ${theme.size[12]};
 `
 
@@ -32,16 +32,17 @@ const cardContentStyles = ({ theme }) => css`
 
   padding: ${theme.size[16]} ${theme.size[24]} ${theme.size[40]};
 `
+
 const cardWrapperStyles = ({ theme }) => css`
   label: card__wrapper;
 
   display: grid;
 
-  grid-template-columns: 310px 310px 310px 310px;
+  grid-template-columns: repeat(4, 310px);
   gap: ${theme.size[40]};
 
   @media (max-width: ${theme.breaks.xl}) {
-    grid-template-columns: 310px 310px;
+    grid-template-columns: repeat(2, 310px);
   }
 
   @media (max-width: 768px) {
@@ -49,8 +50,20 @@ const cardWrapperStyles = ({ theme }) => css`
   }
 `
 
+const tagStyles = ({ theme }) => css`
+  label: card__tag;
+
+  background-color: ${theme.colors.gray2};
+  border-radius: ${theme.size[4]};
+
+  width: fit-content;
+
+  padding: ${theme.size[8]};
+`
+
 export const Container = styled('div')(containerStyles)
 export const Card = styled('div')(cardStyles)
 export const Image = styled('img')(imageStyles)
 export const CardContent = styled('div')(cardContentStyles)
 export const CardWrapper = styled('div')(cardWrapperStyles)
+export const Tag = styled('div')(tagStyles)

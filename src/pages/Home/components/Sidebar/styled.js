@@ -16,7 +16,8 @@ const imageWrapperStyles = ({ theme }) => css`
   height: 140px;
 
   border-radius: 100%;
-  background-color: ${theme.colors.primary};
+
+  background: ${theme.colors.gradient};
 `
 
 const profileImageStyles = ({ theme }) => css`
@@ -42,7 +43,14 @@ const iconsWrapperStyles = ({ theme }) => css`
   label: sidebar__icons-wrapper;
 
   svg {
-    color: ${theme.colors.primary};
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.25, 0.39, 0.39, 2.01);
+  }
+
+  svg:hover {
+    fill: ${theme.colors.secondary};
+    transition: all 0.5s cubic-bezier(0.25, 0.39, 0.39, 2.01);
+    transform: scale(1.2);
   }
 `
 

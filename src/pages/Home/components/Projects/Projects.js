@@ -11,7 +11,7 @@ const Projects = () => {
   return (
     <S.Container>
       <Space
-        size={56}
+        size={40}
         justify={width < 1820 && 'center'}
         align={width < 1820 && 'center'}
       >
@@ -20,17 +20,28 @@ const Projects = () => {
         </U.Title>
 
         <S.CardWrapper>
-          {projects.map(({ image, name, description }, index) => (
+          {projects.map(({ image, name, tags, description }, index) => (
             <S.Card key={index}>
               <S.Image src={image} alt={name} />
               <S.CardContent>
-                <U.Title size={24} weight={500} color='primary'>
-                  {name}
-                </U.Title>
+                <Space size={12}>
+                  <U.Title size={24} weight={500} noMargin gradient>
+                    {name}
+                  </U.Title>
+                  <Space row size={8} wrap='wrap'>
+                    {tags.map(tag => (
+                      <S.Tag>
+                        <U.Text noMargin size={12} spacing='0.2px'>
+                          {tag}
+                        </U.Text>
+                      </S.Tag>
+                    ))}
+                  </Space>
 
-                <U.Text size={16} weight={400} color='gray' noMargin>
-                  {description}
-                </U.Text>
+                  <U.Text size={16} weight={400} color='gray' noMargin>
+                    {description}
+                  </U.Text>
+                </Space>
               </S.CardContent>
             </S.Card>
           ))}

@@ -4,25 +4,25 @@ export const projects = [
   {
     name: 'Empowerdata',
     image: thumb,
-    tags: ['React', 'Emotion'],
+    tags: ['React', 'Emotion', 'framer-motion'],
     description: 'website to data analisys courses'
   },
   {
-    name: 'Empowerdata',
+    name: 'Ugrowth',
     image: thumb,
-    tags: ['React', 'Emotion'],
+    tags: ['React', 'Styled components', 'Typescript'],
     description: 'website to data analisys courses'
   },
   {
-    name: 'Empowerdata',
+    name: 'QuickCard',
     image: thumb,
-    tags: ['React', 'Emotion'],
+    tags: ['React', 'Javascript', 'Styled components'],
     description: 'website to data analisys courses'
   },
   {
-    name: 'Empowerdata',
+    name: 'Brinkabox',
     image: thumb,
-    tags: ['React', 'Emotion'],
+    tags: ['HTML5', 'CSS3', 'Javascript'],
     description: 'website to data analisys courses'
   }
 ]

@@ -11,8 +11,15 @@ const containerStyles = ({ theme }) => css`
   max-width: 1800px;
 `
 
-const baseTextStyles = ({ theme, size, color, weight, noMargin }) => css`
-  label: title;
+const baseTextStyles = ({
+  theme,
+  size,
+  color,
+  weight,
+  noMargin,
+  spacing
+}) => css`
+  label: text;
 
   font-size: ${theme.size[size]};
   font-weight: ${weight ? weight : 'normal'};
@@ -20,8 +27,21 @@ const baseTextStyles = ({ theme, size, color, weight, noMargin }) => css`
   color: ${color ? theme.colors[color] : theme.colors.white};
 
   margin-bottom: ${!noMargin && theme.size[16]};
+
+  letter-spacing: ${spacing && spacing};
 `
 
+const gradientTextStyles = ({ theme, gradient }) =>
+  gradient &&
+  css`
+    label: text--gradient;
+
+    background: ${theme.colors.gradient};
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  `
+
 export const Container = styled('div')(containerStyles)
-export const Title = styled('h1')(baseTextStyles)
-export const Text = styled('p')(baseTextStyles)
+export const Title = styled('h1')(baseTextStyles, gradientTextStyles)
+export const Text = styled('p')(baseTextStyles, gradientTextStyles)

@@ -21,6 +21,7 @@ const rowStyles = ({ theme, size, row }) =>
 
     & > div:not(:last-child) {
       margin-right: ${theme.size[size]};
+      margin-bottom: 0;
     }
   `
 
@@ -48,9 +49,22 @@ const justifyStyles = ({ justify }) => {
   `
 }
 
+const wrapStyles = ({ wrap }) => {
+  if (!wrap) {
+    return null
+  }
+
+  return css`
+    label: ${`space--wrap`};
+
+    flex-wrap: ${wrap};
+  `
+}
+
 export const Container = styled('div')(
   baseStyles,
   rowStyles,
   alignStyles,
-  justifyStyles
+  justifyStyles,
+  wrapStyles
 )

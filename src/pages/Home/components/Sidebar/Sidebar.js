@@ -8,9 +8,10 @@ import {
   AiFillLinkedin,
   AiOutlineCodepen
 } from 'react-icons/ai'
+import { fade } from '~/styles/animations'
 
 import { Space } from '~/components'
-
+import { motion } from 'framer-motion'
 import useBreakpoints from '~/hooks/useBreakpoints'
 
 import * as S from './styled'
@@ -22,65 +23,69 @@ const Sidebar = () => {
   const isMobile = width < 768
 
   return (
-    <S.Container>
-      <Space size={32} align='center'>
-        <S.ImageWrapper>
-          <S.ProfileImage>
-            <img src={profile} alt='profile' />
-          </S.ProfileImage>
-        </S.ImageWrapper>
+    <motion.div exit={{ opacity: 0 }} initial='initial' animate='animate'>
+      <S.Container variants={fade}>
+        <Space size={32} align='center'>
+          <S.ImageWrapper>
+            <S.ProfileImage>
+              <img src={profile} alt='profile' />
+            </S.ProfileImage>
+          </S.ImageWrapper>
 
-        <Space size={0} align='center'>
-          <U.Title size={isMobile ? 32 : 40} weight={600} noMargin>
-            Henrique Araújo
-          </U.Title>
+          <Space size={0} align='center'>
+            <U.Title size={isMobile ? 32 : 40} weight={600} noMargin>
+              Henrique Araújo
+            </U.Title>
 
-          <U.Text size={isMobile ? 16 : 24} weight={400} noMargin gradient>
-            Front-end developer
-          </U.Text>
-        </Space>
+            <U.Text size={isMobile ? 16 : 24} weight={400} noMargin gradient>
+              Front-end developer
+            </U.Text>
+          </Space>
 
-        <S.IconsWrapper>
-          <Space row size={16}>
-            <a href='https://github.com/henrique770' aria-label='github'>
-              <AiOutlineGithub size={35} fill='url(#g31)' />
-            </a>
-            <a
-              href='https://www.linkedin.com/in/henrique47/'
-              aria-label='linkedin'
-            >
-              <AiFillLinkedin size={35} fill='url(#g31)' />
-            </a>
-            <a
-              href='https://codepen.io/yagame/pens/public'
-              aria-label='codepend'
-            >
-              <AiOutlineCodepen size={35} fill='url(#g31)' />
+          <S.IconsWrapper>
+            <Space row size={16}>
+              <a href='https://github.com/henrique770' aria-label='github'>
+                <AiOutlineGithub size={35} fill='url(#g31)' />
+              </a>
+              <a
+                href='https://www.linkedin.com/in/henrique47/'
+                aria-label='linkedin'
+              >
+                <AiFillLinkedin size={35} fill='url(#g31)' />
+              </a>
+              <a
+                href='https://codepen.io/yagame/pens/public'
+                aria-label='codepend'
+              >
+                <AiOutlineCodepen size={35} fill='url(#g31)' />
+              </a>
+            </Space>
+          </S.IconsWrapper>
+
+          <Space row size={4}>
+            <U.Text size={16} color='white' noMargin>
+              Contact |
+            </U.Text>
+            <a href='mailto:henrique.1360@gmail.com'>
+              <U.Text size={16} noMargin color='primary' gradient weight={600}>
+                henrique.1360@gmail.com
+              </U.Text>
             </a>
           </Space>
-        </S.IconsWrapper>
-
-        <Space row size={4}>
-          <U.Text size={16} color='white' noMargin>
-            Contact |
-          </U.Text>
-          <U.Text size={16} noMargin color='primary' gradient weight={600}>
-            henrique.1360@gmail.com
-          </U.Text>
         </Space>
-      </Space>
-      <svg style={{ position: 'absolute' }}>
-        <linearGradient
-          id='g31'
-          gradientUnits='userSpaceOnUse'
-          y1='100%'
-          x2='400%'
-        >
-          <stop stop-color='#ef0f2c' offset='0' />
-          <stop stop-color='#ff3939' offset='0.7' />
-        </linearGradient>
-      </svg>
-    </S.Container>
+        <svg style={{ position: 'absolute' }}>
+          <linearGradient
+            id='g31'
+            gradientUnits='userSpaceOnUse'
+            y1='100%'
+            x2='400%'
+          >
+            <stop stop-color='#ef0f2c' offset='0' />
+            <stop stop-color='#ff3939' offset='0.7' />
+          </linearGradient>
+        </svg>
+      </S.Container>
+    </motion.div>
   )
 }
 

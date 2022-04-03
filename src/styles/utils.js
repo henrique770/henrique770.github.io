@@ -4,11 +4,19 @@ import { css } from '@emotion/react'
 const containerStyles = ({ theme }) => css`
   label: container;
 
-  padding: ${theme.size[24]} ${theme.size[24]} 100px;
+  padding: ${theme.size[24]} ${theme.size[48]} 100px;
   margin-left: auto;
   margin-right: auto;
 
   max-width: 1800px;
+
+  @media (min-width: ${theme.breaks.xl}) {
+    padding: ${theme.size[24]} ${theme.size[24]} 100px;
+  }
+
+  @media (max-width: ${theme.breaks.s}) {
+    padding: ${theme.size[24]} ${theme.size[16]} 100px;
+  }
 `
 
 const baseTextStyles = ({

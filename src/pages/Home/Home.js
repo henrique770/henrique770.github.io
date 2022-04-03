@@ -8,7 +8,7 @@ import * as S from './styled'
 const Home = () => {
   const { width } = useBreakpoints()
 
-  const isDesktop = width > 1820
+  const isDesktop = width > 1440
 
   return (
     <Layout>

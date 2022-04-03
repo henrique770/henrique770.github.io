@@ -1,6 +1,7 @@
 import { projects } from './constants'
 import { Space } from '~/components'
 import useBreakpoints from '~/hooks/useBreakpoints'
+import { container, item } from '~/styles/animations'
 
 import * as S from './styled'
 import * as U from '~/styles/utils'
@@ -12,17 +13,27 @@ const Projects = () => {
     <S.Container>
       <Space
         size={40}
-        justify={width < 1820 && 'center'}
-        align={width < 1820 && 'center'}
+        justify={width < 1440 && 'center'}
+        align={width < 1440 && 'center'}
       >
         <U.Title size={48} weight={600} noMargin>
           Projects
         </U.Title>
 
-        <S.CardWrapper>
+        <S.CardWrapper
+          variants={container}
+          initial='hidden'
+          animate='show'
+          exit='exit'
+        >
           {projects.map(({ image, name, tags, description, link }, index) => (
-            <S.Card key={index}>
-              <a href={link} aria-label={name}>
+            <S.Card
+              key={index}
+              whileHover={{ scale: 1.07 }}
+              whileTap={{ scale: 1 }}
+              variants={item}
+            >
+              <a href={link} aria-label={name} target='_blank'>
                 <S.Image src={image} alt={name} />
               </a>
               <S.CardContent>

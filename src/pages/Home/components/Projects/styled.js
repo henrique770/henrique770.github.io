@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
+import { motion } from 'framer-motion'
 
 const containerStyles = ({ theme }) => css`
   label: projects;
@@ -42,6 +43,10 @@ const cardWrapperStyles = ({ theme }) => css`
   gap: ${theme.size[40]};
 
   @media (max-width: ${theme.breaks.xl}) {
+    grid-template-columns: repeat(3, 310px);
+  }
+
+  @media (max-width: ${theme.breaks.l}) {
     grid-template-columns: repeat(2, 310px);
   }
 
@@ -62,8 +67,8 @@ const tagStyles = ({ theme }) => css`
 `
 
 export const Container = styled('div')(containerStyles)
-export const Card = styled('div')(cardStyles)
+export const Card = styled(motion.div)(cardStyles)
 export const Image = styled('img')(imageStyles)
 export const CardContent = styled('div')(cardContentStyles)
-export const CardWrapper = styled('div')(cardWrapperStyles)
+export const CardWrapper = styled(motion.div)(cardWrapperStyles)
 export const Tag = styled('div')(tagStyles)

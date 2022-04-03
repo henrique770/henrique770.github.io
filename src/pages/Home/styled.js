@@ -1,12 +1,14 @@
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 
-const containerStyles = () => css`
+const containerStyles = ({ theme }) => css`
   label: home-container;
 
-  display: flex;
-
   margin-top: 200px;
+
+  @media (max-width: ${theme.breaks.xl}) {
+    margin-top: 56px;
+  }
 `
 
 export const Container = styled('div')(containerStyles)

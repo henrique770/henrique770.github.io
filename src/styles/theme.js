@@ -4,7 +4,8 @@ const theme = {
     primary: '#EE324B',
     secondary: '#f7586d',
     white: '#ffffff',
-    gray: '#888888'
+    gray: '#888888',
+    darkGray: '#333333'
   },
 
   size: {
@@ -20,10 +21,10 @@ const theme = {
   },
 
   breaks: {
-    huge: '1440px',
-    large: '1170px',
-    medium: '768px',
-    small: '450px'
+    xl: '1820px',
+    l: '1170px',
+    m: '768px',
+    s: '450px'
   }
 }
 

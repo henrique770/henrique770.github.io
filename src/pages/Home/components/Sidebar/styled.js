@@ -12,8 +12,8 @@ const imageWrapperStyles = ({ theme }) => css`
   justify-content: center;
   align-items: center;
 
-  width: 170px;
-  height: 170px;
+  width: 140px;
+  height: 140px;
 
   border-radius: 100%;
   background-color: ${theme.colors.primary};
@@ -26,14 +26,14 @@ const profileImageStyles = ({ theme }) => css`
   justify-content: center;
   align-items: center;
 
-  width: 160px;
-  height: 160px;
+  width: 130px;
+  height: 130px;
 
   border-radius: 100%;
   background-color: ${theme.colors.background};
 
   img {
-    width: 140px;
+    width: 110px;
     border-radius: 100%;
   }
 `

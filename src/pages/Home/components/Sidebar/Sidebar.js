@@ -1,5 +1,5 @@
 import React from 'react'
-import profile from '../../../../assets/profile.jpg'
+import profile from '~/assets/profile.jpg'
 import {
   AiOutlineGithub,
   AiOutlineTwitter,
@@ -8,10 +8,10 @@ import {
   AiOutlineCodepen
 } from 'react-icons/ai'
 
-import { Space } from '../../../../components'
+import { Space } from '~/components'
 
 import * as S from './styled'
-import * as U from '../../../../styles/utils'
+import * as U from '~/styles/utils'
 
 const Sidebar = () => (
   <S.Container>

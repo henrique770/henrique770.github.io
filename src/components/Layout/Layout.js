@@ -1,7 +1,7 @@
-import logo from '../../assets/favicon.png'
+import logo from '~/assets/favicon.png'
 
 import * as S from './styled'
-import * as U from '../../styles/utils'
+import * as U from '~/styles/utils'
 
 const Layout = ({ children }) => (
   <S.Background>

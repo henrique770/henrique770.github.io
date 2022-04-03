@@ -21,7 +21,7 @@ export const projects = [
   {
     name: 'Ugrowth admin',
     image: ugrowthAdmin,
-    tags: ['React', 'Styled components', 'Typescript'],
+    tags: ['React', 'Styled components'],
     description: 'Front-end admin for online course platform.',
     link: 'https://deploy-preview-18--practical-curran-19f835.netlify.app/admin'
   },

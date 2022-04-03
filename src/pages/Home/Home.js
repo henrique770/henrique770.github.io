@@ -1,11 +1,14 @@
 import { Sidebar } from './components/Sidebar'
 import { Projects } from './components/Projects'
-import { Layout } from '../../components/Layout'
+import { Layout } from '../../components'
+import * as S from './styled'
 
 const Home = () => (
   <Layout>
-    <Sidebar />
-    <Projects />
+    <S.Container>
+      <Sidebar />
+      {/* <Projects /> */}
+    </S.Container>
   </Layout>
 )
 

@@ -13,13 +13,8 @@ const globalStyles = css`
   #root {
     font-size: 62.5%;
     min-height: 100%;
-    font: 16px 'Montserrat', sans-serif;
-    line-height: 1.6;
-  }
-
-  button {
-    line-height: 1.6;
-    cursor: pointer;
+    font: 16px 'Roboto', sans-serif;
+    line-height: 1;
   }
 `
 

@@ -7,15 +7,16 @@ const theme = {
     gray: '#888888'
   },
 
-  sizes: {
-    bit: '4px',
-    byte: '8px',
-    kilo: '16px',
-    giga: '24px',
-    tera: '32px',
-    peta: '40px',
-    exa: '48px',
-    zetta: '48px'
+  size: {
+    '4': '4px',
+    '8': '8px',
+    '12': '12px',
+    '16': '16px',
+    '24': '24px',
+    '32': '32px',
+    '40': '40px',
+    '48': '48px',
+    '56': '56px'
   },
 
   breaks: {

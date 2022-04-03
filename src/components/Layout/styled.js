@@ -1,18 +1,23 @@
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 
-const containerStyles = ({ theme }) => css`
+const backgroundStyles = ({ theme }) => css`
   label: layout;
 
   background-color: ${theme.colors.background};
 
-  padding: ${theme.sizes.giga};
+  min-height: 100vh;
+`
 
-  height: 100vh;
+const headerStyles = ({ theme }) => css`
+  label: layout__header;
 
-  h1 {
-    color: ${theme.colors.primary};
+  display: flex;
+
+  img {
+    width: ${theme.size[40]};
   }
 `
 
-export const Container = styled('div')(containerStyles)
+export const Background = styled('div')(backgroundStyles)
+export const Header = styled('div')(headerStyles)

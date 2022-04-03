@@ -64,6 +64,7 @@ const tagStyles = ({ theme }) => css`
   width: fit-content;
 
   padding: ${theme.size[8]};
+  margin-bottom: ${theme.size[8]};
 `
 
 export const Container = styled('div')(containerStyles)

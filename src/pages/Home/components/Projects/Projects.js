@@ -38,14 +38,14 @@ const Projects = () => {
               </a>
               <S.CardContent>
                 <Space size={12}>
-                  <a href={link} aria-label={name}>
+                  <a href={link} aria-label={name} target='_blank'>
                     <U.Title size={24} weight={500} noMargin gradient>
                       {name}
                     </U.Title>
                   </a>
                   <Space row size={8} wrap='wrap'>
-                    {tags.map(tag => (
-                      <S.Tag>
+                    {tags.map((tag, index) => (
+                      <S.Tag key={index}>
                         <U.Text noMargin size={12} spacing='0.2px' height={1}>
                           {tag}
                         </U.Text>

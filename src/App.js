@@ -1,10 +1,10 @@
-import { Home } from './pages/Home'
-import { AnimatePresence } from 'framer-motion'
+import { BrowserRouter } from 'react-router-dom'
+import AppRoutes from './routes'
 
 const App = () => (
-  <AnimatePresence>
-    <Home />
-  </AnimatePresence>
+  <BrowserRouter>
+    <AppRoutes />
+  </BrowserRouter>
 )
 
 export default App

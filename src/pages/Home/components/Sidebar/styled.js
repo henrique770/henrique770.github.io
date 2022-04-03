@@ -18,7 +18,11 @@ const imageWrapperStyles = ({ theme }) => css`
 
   border-radius: 100%;
 
-  background: ${theme.colors.gradient};
+  background: linear-gradient(
+    126deg,
+    ${theme.colors.primary} 65%,
+    ${theme.colors.orange} 100%
+  );
 `
 
 const profileImageStyles = ({ theme }) => css`

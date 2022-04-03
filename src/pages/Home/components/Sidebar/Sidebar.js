@@ -37,7 +37,12 @@ const Sidebar = () => {
               Henrique Araújo
             </U.Title>
 
-            <U.Text size={isMobile ? 16 : 24} weight={400} noMargin gradient>
+            <U.Text
+              size={isMobile ? 16 : 24}
+              weight={400}
+              noMargin
+              color='primary'
+            >
               Front-end developer
             </U.Text>
           </Space>
@@ -67,7 +72,7 @@ const Sidebar = () => {
               Contact |
             </U.Text>
             <a href='mailto:henrique.1360@gmail.com'>
-              <U.Text size={16} noMargin color='primary' gradient weight={600}>
+              <U.Text size={16} noMargin color='primary'>
                 henrique.1360@gmail.com
               </U.Text>
             </a>
@@ -77,11 +82,11 @@ const Sidebar = () => {
           <linearGradient
             id='g31'
             gradientUnits='userSpaceOnUse'
-            y1='100%'
-            x2='400%'
+            y1='400%'
+            x2='100%'
           >
-            <stop stop-color='#ef0f2c' offset='0' />
-            <stop stop-color='#ff3939' offset='0.7' />
+            <stop stopColor='#ff3939' offset='0' />
+            <stop stopColor='#ef0f2c' offset='0.7' />
           </linearGradient>
         </svg>
       </S.Container>

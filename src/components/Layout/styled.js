@@ -16,6 +16,7 @@ const headerStyles = ({ theme }) => css`
 
   img {
     width: ${theme.size[40]};
+    cursor: pointer;
   }
 `
 

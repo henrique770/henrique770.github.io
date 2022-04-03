@@ -1,9 +1,8 @@
-import { Space } from '~/components'
-import { Sidebar } from './components/Sidebar'
-import { Projects } from './components/Projects'
-import { Layout } from '~/components'
-import theme from '~/styles/theme'
+import { Layout, Space } from '~/components'
+import { Sidebar, Projects } from './components'
+
 import useBreakpoints from '~/hooks/useBreakpoints'
+
 import * as S from './styled'
 
 const Home = () => {

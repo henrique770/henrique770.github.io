@@ -1,8 +1,12 @@
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 
-const containerStyles = () => css`
+const containerStyles = ({ theme }) => css`
   label: projects;
+
+  @media (max-width: ${theme.breaks.xl}) {
+    margin-top: ${theme.size[56]};
+  }
 `
 
 const cardStyles = ({ theme }) => css`

@@ -4,7 +4,7 @@ import { css } from '@emotion/react'
 const containerStyles = ({ theme }) => css`
   label: container;
 
-  padding: ${theme.size[24]};
+  padding: ${theme.size[24]} ${theme.size[24]} 100px;
   margin-left: auto;
   margin-right: auto;
 

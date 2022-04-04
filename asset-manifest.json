@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.js": "/static/js/main.1f9b6044.js",
-    "static/media/ugrowth.png": "/static/media/ugrowth.bcc7e6dd35ca8a44a04e.png",
-    "static/media/brinkabox.png": "/static/media/brinkabox.166ccbbdc6139e06687c.png",
-    "static/media/empowerdata.png": "/static/media/empowerdata.d0c7ec23d39efcf2aeac.png",
-    "static/media/ugrowth-admin.png": "/static/media/ugrowth-admin.7d89c716802a54e41d4e.png",
-    "static/media/favicon.png": "/static/media/favicon.ee3e7aafc3be87c2d538.png",
-    "static/media/profile.jpg": "/static/media/profile.b061e22fdce41e6f6716.jpg",
-    "index.html": "/index.html",
-    "main.1f9b6044.js.map": "/static/js/main.1f9b6044.js.map"
+    "main.js": "/website/static/js/main.1aff84cc.js",
+    "static/media/ugrowth.png": "/website/static/media/ugrowth.bcc7e6dd35ca8a44a04e.png",
+    "static/media/brinkabox.png": "/website/static/media/brinkabox.166ccbbdc6139e06687c.png",
+    "static/media/empowerdata.png": "/website/static/media/empowerdata.d0c7ec23d39efcf2aeac.png",
+    "static/media/ugrowth-admin.png": "/website/static/media/ugrowth-admin.7d89c716802a54e41d4e.png",
+    "static/media/favicon.png": "/website/static/media/favicon.ee3e7aafc3be87c2d538.png",
+    "static/media/profile.jpg": "/website/static/media/profile.b061e22fdce41e6f6716.jpg",
+    "index.html": "/website/index.html",
+    "main.1aff84cc.js.map": "/website/static/js/main.1aff84cc.js.map"
   },
   "entrypoints": [
-    "static/js/main.1f9b6044.js"
+    "static/js/main.1aff84cc.js"
   ]
 }

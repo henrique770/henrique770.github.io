@@ -14,7 +14,6 @@ import { motion } from 'framer-motion'
 import useBreakpoints from '~/hooks/useBreakpoints'
 
 import * as S from './styled'
-import * as U from '~/styles/utils'
 
 const Sidebar = () => {
   const { width } = useBreakpoints()

@@ -24,7 +24,6 @@ const Text = props => {
       css={{
         $$size: theme.sizes[size],
         $$color: theme.colors[color],
-        $$noMargin: noMargin,
         ...styles
       }}
       color={Boolean(color)}

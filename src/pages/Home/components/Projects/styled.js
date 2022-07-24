@@ -1,75 +1,62 @@
-import styled from '@emotion/styled'
-import { css } from '@emotion/react'
+import { styled } from '~/stitches.config'
+
 import { motion } from 'framer-motion'
 
-const containerStyles = ({ theme }) => css`
-  label: projects;
-
-  @media (max-width: ${theme.breaks.xl}) {
-    margin-top: ${theme.size[56]};
+const containerStyles = {
+  '@bp4': {
+    marginTop: '$9'
   }
-`
+}
 
-const cardStyles = ({ theme }) => css`
-  label: card;
+const cardStyles = {
+  backgroundColor: '$gray1',
+  borderRadius: '$3'
+}
 
-  background-color: ${theme.colors.gray1};
-  border-radius: ${theme.size[12]};
-`
+const imageStyles = {
+  height: '200px',
+  width: '100%',
+  objectFit: 'cover',
 
-const imageStyles = ({ theme }) => css`
-  label: card__image;
+  borderTopLeftRadius: '$3',
+  borderTopRightRadius: '$3'
+}
 
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
+const cardContentStyles = {
+  padding: '$1 $5 $7'
+}
 
-  border-top-left-radius: ${theme.size[12]};
-  border-top-right-radius: ${theme.size[12]};
-`
+const cardWrapperStyles = {
+  display: 'grid',
+  gridTemplateColumns: 'repeat(4, 310px)',
+  gap: '$7',
 
-const cardContentStyles = ({ theme }) => css`
-  label: card__content;
+  '@bp4': {
+    gridTemplateColumns: 'repeat(3, 310px)'
+  },
 
-  padding: ${theme.size[4]} ${theme.size[24]} ${theme.size[40]};
-`
+  '@bp3': {
+    gridTemplateColumns: 'repeat(2, 310px)'
+  },
 
-const cardWrapperStyles = ({ theme }) => css`
-  label: card__wrapper;
-
-  display: grid;
-
-  grid-template-columns: repeat(4, 310px);
-  gap: ${theme.size[40]};
-
-  @media (max-width: ${theme.breaks.xl}) {
-    grid-template-columns: repeat(3, 310px);
+  '@bp2': {
+    gridTemplateColumns: '1fr'
   }
+}
 
-  @media (max-width: ${theme.breaks.l}) {
-    grid-template-columns: repeat(2, 310px);
-  }
+const tagStyles = {
+  backgroundColor: '$gray2',
+  borderRadius: '$1',
 
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
-`
+  width: 'fit-content',
 
-const tagStyles = ({ theme }) => css`
-  label: card__tag;
+  padding: '$2',
+  marginBottom: '$2'
+}
 
-  background-color: ${theme.colors.gray2};
-  border-radius: ${theme.size[4]};
-
-  width: fit-content;
-
-  padding: ${theme.size[8]};
-  margin-bottom: ${theme.size[8]};
-`
-
-export const Container = styled('div')(containerStyles)
-export const Card = styled(motion.div)(cardStyles)
-export const Image = styled('img')(imageStyles)
-export const CardContent = styled('div')(cardContentStyles)
-export const CardWrapper = styled(motion.div)(cardWrapperStyles)
-export const Tag = styled('div')(tagStyles)
+export const Container = styled('div', containerStyles)
+export const Card = styled(motion.div, cardStyles)
+export const Image = styled('img', imageStyles)
+export const CardContent = styled('div', cardContentStyles)
+export const CardWrapper = styled(motion.div, cardWrapperStyles)
+export const Tag = styled('div', tagStyles)

@@ -1,66 +1,56 @@
-import styled from '@emotion/styled'
-import { css } from '@emotion/react'
+import { styled } from '~/stitches.config'
+
 import { motion } from 'framer-motion'
 
-const containerStyles = () => css`
-  label: sidebar;
-`
+const imageWrapperStyles = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
 
-const imageWrapperStyles = ({ theme }) => css`
-  label: sidebar__image;
+  width: '140px',
+  height: '140px',
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  borderRadius: '100%',
 
-  width: 140px;
-  height: 140px;
-
-  border-radius: 100%;
-
-  background: linear-gradient(
+  background: `linear-gradient(
     126deg,
-    ${theme.colors.primary} 65%,
-    ${theme.colors.orange} 100%
-  );
-`
+    $primary 65%,
+    $orange 100%
+  );`
+}
 
-const profileImageStyles = ({ theme }) => css`
-  label: sidebar__profile-image;
+const profileImageStyles = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: '130px',
+  height: '130px',
 
-  width: 130px;
-  height: 130px;
+  borderRadius: '100%',
+  backgroundColor: '$background',
 
-  border-radius: 100%;
-  background-color: ${theme.colors.background};
-
-  img {
-    width: 110px;
-    border-radius: 100%;
+  img: {
+    width: '110px',
+    borderRadius: '100%'
   }
-`
+}
 
-const iconsWrapperStyles = ({ theme }) => css`
-  label: sidebar__icons-wrapper;
+const iconsWrapperStyles = {
+  cursor: 'pointer',
 
-  cursor: pointer;
+  svg: {
+    transition: 'all 0.5s cubic-bezier(0.25, 0.39, 0.39, 2.01)'
+  },
 
-  svg {
-    transition: all 0.5s cubic-bezier(0.25, 0.39, 0.39, 2.01);
+  'svg:hover': {
+    fill: '$white',
+    transition: 'all 0.5s cubic-bezier(0.25, 0.39, 0.39, 2.01)',
+    transform: 'scale(1.2)'
   }
+}
 
-  svg:hover {
-    fill: ${theme.colors.white};
-    transition: all 0.5s cubic-bezier(0.25, 0.39, 0.39, 2.01);
-    transform: scale(1.2);
-  }
-`
-
-export const Container = styled(motion.div)(containerStyles)
-export const ImageWrapper = styled('div')(imageWrapperStyles)
-export const IconsWrapper = styled('div')(iconsWrapperStyles)
-export const ProfileImage = styled('div')(profileImageStyles)
+export const Container = styled(motion.div)
+export const ImageWrapper = styled('div', imageWrapperStyles)
+export const IconsWrapper = styled('div', iconsWrapperStyles)
+export const ProfileImage = styled('div', profileImageStyles)

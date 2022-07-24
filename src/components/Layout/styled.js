@@ -1,24 +1,21 @@
-import styled from '@emotion/styled'
-import { css } from '@emotion/react'
+import { styled } from '~/stitches.config'
 
-const backgroundStyles = ({ theme }) => css`
-  label: layout;
+const backgroundStyles = {
+  label: 'layout',
+  backgroundColor: '$background',
+  minHeight: '100vh'
+}
 
-  background-color: ${theme.colors.background};
+const headerStyles = {
+  label: 'layout__header',
 
-  min-height: 100vh;
-`
+  display: 'flex',
 
-const headerStyles = ({ theme }) => css`
-  label: layout__header;
-
-  display: flex;
-
-  img {
-    width: ${theme.size[40]};
-    cursor: pointer;
+  '& img': {
+    width: '$7',
+    cursor: 'pointer'
   }
-`
+}
 
-export const Background = styled('div')(backgroundStyles)
-export const Header = styled('div')(headerStyles)
+export const Background = styled('div', backgroundStyles)
+export const Header = styled('div', headerStyles)

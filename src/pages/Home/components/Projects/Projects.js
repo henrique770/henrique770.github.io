@@ -1,10 +1,9 @@
 import { projects } from './constants'
-import { Space } from '~/components'
+import { Space, Text } from '~/components'
 import useBreakpoints from '~/hooks/useBreakpoints'
 import { container, item } from '~/styles/animations'
 
 import * as S from './styled'
-import * as U from '~/styles/utils'
 
 const Projects = () => {
   const { width } = useBreakpoints()
@@ -12,13 +11,13 @@ const Projects = () => {
   return (
     <S.Container>
       <Space
-        size={40}
+        size={7}
         justify={width < 1440 && 'center'}
         align={width < 1440 && 'center'}
       >
-        <U.Title size={48} weight={600} noMargin>
+        <Text as='h1' size={8} weight={600} noMargin>
           Projects
-        </U.Title>
+        </Text>
 
         <S.CardWrapper
           variants={container}
@@ -43,7 +42,7 @@ const Projects = () => {
                 <S.Image src={image} alt={name} />
               </a>
               <S.CardContent>
-                <Space size={12}>
+                <Space size={3}>
                   <a
                     href={link}
                     aria-label={name}
@@ -51,23 +50,23 @@ const Projects = () => {
                     without
                     rel='noreferrer'
                   >
-                    <U.Title size={24} weight={500} noMargin gradient>
+                    <Text as='h1' size={5} weight={500} noMargin gradient>
                       {name}
-                    </U.Title>
+                    </Text>
                   </a>
-                  <Space row size={8} wrap='wrap'>
+                  <Space row size={2} wrap='wrap'>
                     {tags.map((tag, index) => (
                       <S.Tag key={index}>
-                        <U.Text noMargin size={12} spacing='0.2px' height={1}>
+                        <Text noMargin size={3} spacing='0.2px' height={1}>
                           {tag}
-                        </U.Text>
+                        </Text>
                       </S.Tag>
                     ))}
                   </Space>
 
-                  <U.Text size={16} weight={400} color='gray' noMargin>
+                  <Text size={4} weight={400} color='gray' noMargin>
                     {description}
-                  </U.Text>
+                  </Text>
                 </Space>
               </S.CardContent>
             </S.Card>

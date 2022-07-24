@@ -9,7 +9,7 @@ import {
 } from 'react-icons/ai'
 import { fade } from '~/styles/animations'
 
-import { Space } from '~/components'
+import { Space, Text } from '~/components'
 import { motion } from 'framer-motion'
 import useBreakpoints from '~/hooks/useBreakpoints'
 
@@ -24,30 +24,25 @@ const Sidebar = () => {
   return (
     <motion.div exit={{ opacity: 0 }} initial='initial' animate='animate'>
       <S.Container variants={fade}>
-        <Space size={32} align='center'>
+        <Space size={6} align='center'>
           <S.ImageWrapper>
             <S.ProfileImage>
               <img src={profile} alt='profile' />
             </S.ProfileImage>
           </S.ImageWrapper>
 
-          <Space size={0} align='center'>
-            <U.Title size={isMobile ? 32 : 40} weight={600} noMargin>
+          <Space align='center'>
+            <Text as='h1' size={isMobile ? 6 : 7} weight={600} noMargin>
               Henrique Araújo
-            </U.Title>
+            </Text>
 
-            <U.Text
-              size={isMobile ? 16 : 24}
-              weight={400}
-              noMargin
-              color='primary'
-            >
+            <Text size={isMobile ? 4 : 5} weight={400} noMargin color='primary'>
               Front-end developer
-            </U.Text>
+            </Text>
           </Space>
 
           <S.IconsWrapper>
-            <Space row size={16}>
+            <Space row size={4}>
               <a href='https://github.com/henrique770' aria-label='github'>
                 <AiOutlineGithub size={35} fill='url(#g31)' />
               </a>
@@ -66,14 +61,14 @@ const Sidebar = () => {
             </Space>
           </S.IconsWrapper>
 
-          <Space row size={4}>
-            <U.Text size={16} color='white' noMargin>
+          <Space row size={1}>
+            <Text size={4} color='white' noMargin>
               Contact |
-            </U.Text>
+            </Text>
             <a href='mailto:henrique.1360@gmail.com'>
-              <U.Text size={16} noMargin color='primary'>
+              <Text size={4} noMargin color='primary'>
                 henrique.1360@gmail.com
-              </U.Text>
+              </Text>
             </a>
           </Space>
         </Space>

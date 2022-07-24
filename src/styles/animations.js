@@ -1,10 +1,21 @@
-import { keyframes } from '@emotion/react'
+import { keyframes } from '~/stitches.config'
 
-export const pulsate = keyframes`
-  0% {transform: scale(0.6, 0.6); opacity: 0.0;}
-  50% {opacity: 1.0;}
-  100% {transform: scale(1, 1); opacity: 0.0;}
-`
+export const pulsate = keyframes({
+  '0%': { transform: 'scale(0.6, 0.6)', opacity: 0.0 },
+  '50%': { opacity: 1.0 },
+  '100%': { transform: 'scale(1, 1)', opacity: 0.0 }
+})
+
+export const appearFromBottom = keyframes({
+  from: {
+    opacity: '0',
+    transform: 'translateY(20px)'
+  },
+  to: {
+    opacity: '1',
+    transform: 'translateY(0)'
+  }
+})
 
 const transition = {
   duration: 0.5,
@@ -108,14 +119,3 @@ export const backVariantsSlow = {
   exit: { x: 100, opacity: 0, transition },
   enter: { x: 0, opacity: 1, transition: { delay: 1, ...transition } }
 }
-
-export const appearFromBottom = keyframes`
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-`

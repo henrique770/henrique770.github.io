@@ -1,57 +1,19 @@
-import styled from '@emotion/styled'
-import { css } from '@emotion/react'
+import { styled } from '~/stitches.config'
 
-const containerStyles = ({ theme }) => css`
-  label: container;
+const containerStyles = {
+  padding: '$5 $5 100px',
+  marginLeft: 'auto',
+  marginRight: 'auto',
 
-  padding: ${theme.size[24]} ${theme.size[48]} 100px;
-  margin-left: auto;
-  margin-right: auto;
+  maxWidth: '1800px',
 
-  max-width: 1800px;
+  '@bp4': {
+    padding: '$5 $8 100px'
+  },
 
-  @media (min-width: ${theme.breaks.xl}) {
-    padding: ${theme.size[24]} ${theme.size[24]} 100px;
+  '@bp1': {
+    padding: '$5 $4 100px'
   }
+}
 
-  @media (max-width: ${theme.breaks.s}) {
-    padding: ${theme.size[24]} ${theme.size[16]} 100px;
-  }
-`
-
-const baseTextStyles = ({
-  theme,
-  size,
-  color,
-  weight,
-  noMargin,
-  spacing,
-  height
-}) => css`
-  label: text;
-
-  font-size: ${theme.size[size]};
-  font-weight: ${weight ? weight : 'normal'};
-
-  color: ${color ? theme.colors[color] : theme.colors.white};
-
-  margin-bottom: ${!noMargin && theme.size[16]};
-
-  letter-spacing: ${spacing && spacing};
-  line-height: ${height && height};
-`
-
-const gradientTextStyles = ({ theme, gradient }) =>
-  gradient &&
-  css`
-    label: text--gradient;
-
-    background: ${theme.colors.gradient};
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  `
-
-export const Container = styled('div')(containerStyles)
-export const Title = styled('h1')(baseTextStyles, gradientTextStyles)
-export const Text = styled('p')(baseTextStyles, gradientTextStyles)
+export const Container = styled('div', containerStyles)

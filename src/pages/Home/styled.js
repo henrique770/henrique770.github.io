@@ -1,14 +1,11 @@
-import styled from '@emotion/styled'
-import { css } from '@emotion/react'
+import { styled } from '~/stitches.config'
 
-const containerStyles = ({ theme }) => css`
-  label: home-container;
+const containerStyles = {
+  marginTop: '150px',
 
-  margin-top: 150px;
-
-  @media (max-width: ${theme.breaks.xl}) {
-    margin-top: 56px;
+  '@bp4': {
+    marginTop: '$9'
   }
-`
+}
 
-export const Container = styled('div')(containerStyles)
+export const Container = styled('div', containerStyles)

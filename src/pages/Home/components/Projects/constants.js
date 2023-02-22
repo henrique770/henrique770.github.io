@@ -2,8 +2,16 @@ import empowerdata from '~/assets/thumbnails/empowerdata.png'
 import brinkabox from '~/assets/thumbnails/brinkabox.png'
 import ugrowth from '~/assets/thumbnails/ugrowth.png'
 import ugrowthAdmin from '~/assets/thumbnails/ugrowth-admin.png'
+import hbacai from '~/assets/thumbnails/hbacaistore.png'
 
 export const projects = [
+  {
+    name: 'HB Açaí',
+    image: hbacai,
+    tags: ['Next.js', 'Stitches', 'Typescript'],
+    description: 'Restaurant website.',
+    link: 'https://hbacai.vercel.app/'
+  },
   {
     name: 'Ugrowth',
     image: ugrowth,
